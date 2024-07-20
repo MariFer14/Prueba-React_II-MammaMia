@@ -2,23 +2,23 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { PizzaContext } from "../context/GlobalContext";
 import { Card, Col, Row } from "react-bootstrap";
+import CarritoIcon from "../assets/carritoIcon.png";
+import OjitosIcon from "../assets/ojitos.png";
 
 function Home() {
-  const { pizzas } = useContext(PizzaContext);
+  const { pizzas, addToCarrito } = useContext(PizzaContext);
 
   return (
     <div>
-      <h1>¡Pizzería Mamma Mia!</h1>
-      <h5>¡Tenemos las mejores pizzas que podrás encontrar!</h5>
-      <Row className="px-5">
+      <Row xs={1} md={5} className="mx-5 my-5">
         {pizzas.map((pizza) => (
-          <Col md={2} key={pizza.id} className="mt-5">
+          <Col key={pizza.id} className="mb-4 mt-3">
             <Card>
               <Card.Img variant="top" src={pizza.img} alt={pizza.name} />
               <Card.Body>
-                <Card.Title>{pizza.name}</Card.Title>
+                <Card.Title style={{fontSize:"23px"}}>{pizza.name}</Card.Title>
                 <hr />
-                <div>
+                <div className="ingredientes">
                   <strong>Ingrdientes:</strong>
                   <ul>
                     {pizza.ingredients.map((ingredient, index) => (
@@ -29,11 +29,20 @@ function Home() {
                 <hr />
                 <div className="precio">
                   <Card.Text>
-                    <strong>Precio: ${pizza.price}</strong>
+                    <strong>$ {pizza.price}</strong>
                   </Card.Text>
                   <div className="botones">
-                    <Link to={`/pizza/${pizza.id}`} className="btn btn-primary">
+                    <Link
+                      to={`/pizza/${pizza.id}`}
+                      className="btn btn-info px-4"
+                      style={{color:"white"}}
+                    >
                       Ver Más
+                      <img className="icono" src={OjitosIcon} alt="Icono Ojitos" />
+                    </Link>
+                    <Link onClick={() => addToCarrito(pizza)} to="/carrito" className="btn btn-danger px-4">
+                      Añadir
+                      <img className="icono" src={CarritoIcon} alt="Icono Carrito" />
                     </Link>
                   </div>
                 </div>

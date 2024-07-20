@@ -19,20 +19,26 @@ function DescripcionProducto() {
   }
 
   return (
-    <div>
-      <h1>{seleccionarPizza.name}</h1>
-      <img src={seleccionarPizza.img} alt={seleccionarPizza.name} />
-      <p>{seleccionarPizza.desc}</p>
-      <div>
-        <strong>Ingrdientes:</strong>
-        <ul>
-          {seleccionarPizza.ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
-        </ul>
+    <div className="producto">
+      <div className="image">
+        <img src={seleccionarPizza.img} alt={seleccionarPizza.name} />
       </div>
-
-      <p>Precio: ${seleccionarPizza.price}</p>
+      <div className="descripcionContainer">
+        <div className="detalles">
+          <h1>{seleccionarPizza.name}</h1>
+          <hr />
+          <p>{seleccionarPizza.desc}</p>
+          <strong>Ingrdientes:</strong>
+          <ul>
+            {seleccionarPizza.ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="precioPizza">
+          <h3>Precio: ${seleccionarPizza.price}</h3>
+        </div>
+      </div>
     </div>
   );
 }

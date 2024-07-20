@@ -1,6 +1,12 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -8,9 +14,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 20px 50px;
-  background-color:rgb(0, 175, 173);
-  margin-bottom: 40px;
+  padding: 1.3em 10em;
+  background-color: rgb(0, 175, 173);
 }
 
 nav .logo {
@@ -18,16 +23,124 @@ nav .logo {
   align-items: center;
 }
 
-nav .logo img{
-  width: 50px;
+nav .logo img {
+  width: 40px;
 }
 
-nav .logo h2{
-  color: #ffffff; 
-  margin-left: 15px;
-}
-
-.precio p{
+nav .logo h5 {
+  color: #ffffff;
+  margin-left: 10px;
   font-size: 22px;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../src/assets/bgHero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+header h1{
+  font-size: 60px;
+}
+
+header hr {
+  border: 1px solid #ffffff;
+  width: 80%;
+}
+
+.carrito{
+  display: flex;
+  align-items: center;
+}
+
+.carrito img{
+  width: 40px;
+  margin-right: 15px;
+}
+
+.carrito span{
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.ingredientes {
+  margin: 25px 20px;
+}
+
+.ingredientes ul{
+  margin-top: 10px;
+}
+
+.ingredientes ul li {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.ingredientes ul li::marker {
+  content: url('../src/assets/list.png');
+}
+
+.precio p {
+  font-size: 27px;
   text-align: center;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.icono{
+  width: 22px;
+  margin-left: 5px;
+}
+
+.producto{
+  display: flex;
+  margin: 3em 8em;
+}
+
+.producto .image img{
+  width: 500px;
+  height: 430px;
+}
+
+.producto .descripcionContainer{
+  border: 1px solid rgb(219, 219, 219);
+  padding: 25px 35px 0 35px;
+}
+
+.producto .descripcionContainer .detalles p{
+  margin: 20px 0;
+}
+
+.producto .descripcionContainer .detalles ul{
+  margin-top: 10px;
+}
+
+.producto .descripcionContainer .detalles ul li {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.producto .descripcionContainer .detalles ul li::marker {
+  content: url('../src/assets/list.png');
+}
+
+.producto .precioPizza{
+  margin: 18px 0;
 }
