@@ -24,7 +24,7 @@ function Navigate() {
         <div className="carrito">
           <Link to="/carrito" style={{ textDecoration: "none" }}>
             <img src={CarritoIcon} alt="Icono Carrito" />
-            <span>{totalEnCarrito.toFixed(2)}</span>
+            <span>$ {totalEnCarrito.toFixed(2)}</span>
           </Link>
         </div>
       </nav>

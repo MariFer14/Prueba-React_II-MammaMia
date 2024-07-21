@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div>
-      <Row xs={1} md={5} className="mx-5 my-5">
+      <Row xs={1} sm={2} md={3} xl={5} className="mx-5 my-5">
         {pizzas.map((pizza) => (
           <Col key={pizza.id} className="mb-4 mt-3">
             <Card>

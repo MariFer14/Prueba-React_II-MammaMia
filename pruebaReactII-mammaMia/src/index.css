@@ -9,6 +9,8 @@ body, html {
   overflow-x: hidden;
 }
 
+/* Header */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -56,6 +58,8 @@ header hr {
   width: 80%;
 }
 
+/* Navigate.jsx */
+
 .carrito{
   display: flex;
   align-items: center;
@@ -70,6 +74,8 @@ header hr {
   color: #ffffff;
   font-size: 18px;
 }
+
+/* Home.jsx */
 
 .ingredientes {
   margin: 25px 20px;
@@ -108,6 +114,8 @@ header hr {
   margin-left: 5px;
 }
 
+/* DescripcionProducto.jsx */
+
 .producto{
   display: flex;
   margin: 3em 8em;
@@ -143,4 +151,56 @@ header hr {
 
 .producto .precioPizza{
   margin: 18px 0;
+}
+
+/* Carrito.jsx */
+
+.container-pedido{
+  margin: 5em;
+  background-color: rgb(240, 240, 240);
+  padding: 30px 50px;
+  border-radius: 15px;
+}
+
+.container-pedido h4{
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.container-pedido h3{
+  margin-bottom: 1em;
+}
+
+.container-pedido .pedido{
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.itemsCarrito{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 10px;
+}
+
+.itemsCarrito .image{
+  display: flex;
+  align-items: center;
+}
+
+.itemsCarrito .image img{
+  margin-right: 18px;
+}
+
+.itemsCarrito .detalles{
+  display: flex;
+  align-items: center;
+}
+
+.itemsCarrito .detalles p{
+  margin-top: 15px;
+  margin-right: 15px;
+  color: #009c00;
 }
